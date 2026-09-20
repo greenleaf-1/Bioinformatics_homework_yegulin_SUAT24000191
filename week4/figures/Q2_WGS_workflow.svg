@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="720" viewBox="0 0 1500 720">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#355070"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #1d3557; }
+      .subtitle { font: 16px Arial, sans-serif; fill: #465568; }
+      .step { font: 700 17px Arial, sans-serif; fill: #17324d; }
+      .body { font: 14px Arial, sans-serif; fill: #263746; }
+      .small { font: 13px Arial, sans-serif; fill: #45576a; }
+      .box { fill: #f5f9fc; stroke: #457b9d; stroke-width: 2; rx: 12; }
+      .decision { fill: #fff3cd; stroke: #d39e00; stroke-width: 2; rx: 12; }
+      .evidence { fill: #e8f5e9; stroke: #4f8a5b; stroke-width: 2; rx: 12; }
+      .arrow { stroke: #355070; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #6c757d; stroke-width: 1.8; fill: none; stroke-dasharray: 7 5; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1500" height="720" fill="#ffffff"/>
+  <text x="750" y="42" text-anchor="middle" class="title">Q2 — Paired-end Human WGS: FASTQ to Interpretable Variants</text>
+  <text x="750" y="70" text-anchor="middle" class="subtitle">S01 is a 120-pair synthetic teaching demo: inspect QC only; do not run a production genome pipeline.</text>
+
+  <rect x="40" y="115" width="245" height="125" class="box"/>
+  <text x="162" y="145" text-anchor="middle" class="step">0–1. Manifest + FASTQ QC</text>
+  <text x="60" y="174" class="body">Pair R1/R2; inspect batch metadata</text>
+  <text x="60" y="198" class="body">Quality, GC, adapter, duplication</text>
+  <text x="60" y="222" class="small">Output: QC report + action decision</text>
+
+  <rect x="335" y="115" width="245" height="125" class="decision"/>
+  <text x="457" y="145" text-anchor="middle" class="step">2. Evidence-based trimming</text>
+  <text x="355" y="174" class="body">Trim demonstrated adapter / 3′ tail</text>
+  <text x="355" y="198" class="body">Preserve raw FASTQ; re-run QC</text>
+  <text x="355" y="222" class="small">Do not de-duplicate raw FASTQ</text>
+
+  <rect x="630" y="115" width="245" height="125" class="box"/>
+  <text x="752" y="145" text-anchor="middle" class="step">3. Reference genome</text>
+  <text x="650" y="174" class="body">GRCh38: exact FASTA + checksum</text>
+  <text x="650" y="198" class="body">Compatible naming and resources</text>
+  <text x="650" y="222" class="small">Output: indexed reference</text>
+
+  <rect x="925" y="115" width="245" height="125" class="box"/>
+  <text x="1047" y="145" text-anchor="middle" class="step">4. Alignment</text>
+  <text x="945" y="174" class="body">BWA-MEM2 + read groups</text>
+  <text x="945" y="198" class="body">Check MAPQ, pairing, insert size</text>
+  <text x="945" y="222" class="small">Output: SAM/BAM + metrics</text>
+
+  <rect x="1215" y="115" width="245" height="125" class="box"/>
+  <text x="1337" y="145" text-anchor="middle" class="step">5. BAM processing</text>
+  <text x="1235" y="174" class="body">Sort → mark duplicates → BQSR*</text>
+  <text x="1235" y="198" class="body">Index final coordinate-sorted BAM</text>
+  <text x="1235" y="222" class="small">*only with compatible resources</text>
+
+  <path d="M285 178 L330 178" class="arrow"/>
+  <path d="M580 178 L625 178" class="arrow"/>
+  <path d="M875 178 L920 178" class="arrow"/>
+  <path d="M1170 178 L1210 178" class="arrow"/>
+
+  <rect x="900" y="325" width="270" height="132" class="box"/>
+  <text x="1035" y="355" text-anchor="middle" class="step">6. Germline variant calling</text>
+  <text x="920" y="385" class="body">HaplotypeCaller per-sample gVCF</text>
+  <text x="920" y="409" class="body">Joint genotype + validated filtering</text>
+  <text x="920" y="433" class="small">Output: filtered cohort VCF</text>
+
+  <rect x="575" y="325" width="270" height="132" class="box"/>
+  <text x="710" y="355" text-anchor="middle" class="step">7. Annotation</text>
+  <text x="595" y="385" class="body">Assembly-matched Ensembl VEP</text>
+  <text x="595" y="409" class="body">Gene, transcript, consequence, AF</text>
+  <text x="595" y="433" class="small">Consequence ≠ pathogenicity</text>
+
+  <rect x="250" y="325" width="270" height="132" class="evidence"/>
+  <text x="385" y="355" text-anchor="middle" class="step">8. IGV + interpretation</text>
+  <text x="270" y="385" class="body">Inspect depth, strand, read-end bias</text>
+  <text x="270" y="409" class="body">Base quality, MAPQ, local repeats</text>
+  <text x="270" y="433" class="small">State uncertainty + validation</text>
+
+  <path d="M1337 240 L1337 285 L1035 285 L1035 320" class="arrow"/>
+  <path d="M900 391 L850 391" class="arrow"/>
+  <path d="M575 391 L525 391" class="arrow"/>
+
+  <rect x="250" y="530" width="920" height="125" class="evidence"/>
+  <text x="710" y="563" text-anchor="middle" class="step">Evidence boundary</text>
+  <text x="280" y="595" class="body">Technical evidence: PASS, depth, genotype quality, read support</text>
+  <text x="280" y="621" class="body">Biological inference: predicted gene/transcript consequence and mechanism</text>
+  <text x="760" y="595" class="body">Clinical interpretation: population, ClinVar/ClinGen, segregation</text>
+  <text x="760" y="621" class="body">Required validation: independent assay and/or functional experiment</text>
+  <path d="M385 457 L385 500 L710 500 L710 525" class="dash"/>
+
+  <text x="750" y="695" text-anchor="middle" class="subtitle">Human judgment controls assembly choice, QC thresholds, tool assumptions, evidence strength, and final claims.</text>
+</svg>

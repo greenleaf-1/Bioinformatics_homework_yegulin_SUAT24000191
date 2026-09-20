@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1020" viewBox="0 0 1400 1020">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#375a7f"/></marker>
+    <style>
+      .title{font:700 32px 'Arial','PingFang SC','Microsoft YaHei',sans-serif;fill:#17324d}
+      .label{font:600 22px 'Arial','PingFang SC','Microsoft YaHei',sans-serif;fill:#17324d}
+      .text{font:18px 'Arial','PingFang SC','Microsoft YaHei',sans-serif;fill:#243746}
+      .small{font:16px 'Arial','PingFang SC','Microsoft YaHei',sans-serif;fill:#3f5364}
+      .box{stroke:#375a7f;stroke-width:2.5;rx:18;ry:18}
+      .line{stroke:#375a7f;stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .dash{stroke:#71879b;stroke-width:2.5;stroke-dasharray:8 7;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1400" height="1020" fill="#f8fbfd"/>
+  <text x="700" y="52" text-anchor="middle" class="title">Gene X 上调机制的分阶段 assay 工作流</text>
+
+  <rect x="445" y="82" width="510" height="88" class="box" fill="#e6f2ff"/>
+  <text x="700" y="118" text-anchor="middle" class="label">观察：疾病组 Gene X 显著上调</text>
+  <text x="700" y="148" text-anchor="middle" class="small">RNA-seq 核对表达、转录本、重复与协变量</text>
+
+  <path d="M700 170 L700 213" class="line"/>
+  <rect x="445" y="216" width="510" height="96" class="box" fill="#d9f2e6"/>
+  <text x="700" y="253" text-anchor="middle" class="label">第一步：ATAC-seq</text>
+  <text x="700" y="284" text-anchor="middle" class="text">比较启动子和候选调控区的染色质可及性</text>
+
+  <path d="M700 312 L700 355" class="line"/>
+  <rect x="445" y="358" width="510" height="96" class="box" fill="#fff0cc"/>
+  <text x="700" y="395" text-anchor="middle" class="label">H3K27ac ChIP-seq / CUT&amp;Tag</text>
+  <text x="700" y="426" text-anchor="middle" class="text">判断开放区是否具有活跃调控元件特征</text>
+
+  <path d="M700 454 L700 497" class="line"/>
+  <rect x="445" y="500" width="510" height="96" class="box" fill="#eadffc"/>
+  <text x="700" y="537" text-anchor="middle" class="label">Hi-C / Micro-C</text>
+  <text x="700" y="568" text-anchor="middle" class="text">检查候选区域与 Gene X 启动子的空间接触</text>
+
+  <path d="M700 596 L700 639" class="line"/>
+  <rect x="445" y="642" width="510" height="112" class="box" fill="#ffdede"/>
+  <text x="700" y="680" text-anchor="middle" class="label">功能验证</text>
+  <text x="700" y="711" text-anchor="middle" class="text">MPRA：人工系统中的潜在调控能力</text>
+  <text x="700" y="738" text-anchor="middle" class="text">CRISPRi：原生位点扰动及 Gene X 表达 readout</text>
+
+  <path d="M445 264 L296 264 L296 355" class="dash"/>
+  <path d="M955 264 L1104 264 L1104 355" class="dash"/>
+  <rect x="55" y="358" width="480" height="230" class="box" fill="#eef4f8"/>
+  <text x="295" y="397" text-anchor="middle" class="label">条件分支：序列与甲基化</text>
+  <text x="295" y="438" text-anchor="middle" class="text">WGS：非编码调控变异与结构变异</text>
+  <text x="295" y="476" text-anchor="middle" class="text">WGBS / EM-seq：启动子和增强子甲基化</text>
+  <text x="295" y="520" text-anchor="middle" class="small">异常结果需与 ATAC、表达和功能实验整合</text>
+  <text x="295" y="553" text-anchor="middle" class="small">变异或甲基化差异本身不等于因果</text>
+
+  <rect x="865" y="358" width="480" height="230" class="box" fill="#eef4f8"/>
+  <text x="1105" y="397" text-anchor="middle" class="label">条件分支：转录起始与三维结构</text>
+  <text x="1105" y="438" text-anchor="middle" class="text">CAGE / RAMPAGE：TSS 与替代启动子</text>
+  <text x="1105" y="476" text-anchor="middle" class="text">ATAC 阴性时仍可比较差异接触</text>
+  <text x="1105" y="520" text-anchor="middle" class="small">Hi-C/Micro-C 接触区需再检查调控状态</text>
+  <text x="1105" y="553" text-anchor="middle" class="small">空间接近不等于功能性调控</text>
+
+  <path d="M535 548 L445 548" class="dash"/>
+  <path d="M865 548 L955 548" class="dash"/>
+
+  <rect x="210" y="820" width="980" height="126" rx="18" ry="18" fill="#ffffff" stroke="#9aaeba" stroke-width="2"/>
+  <text x="700" y="856" text-anchor="middle" class="label">结论原则</text>
+  <text x="700" y="891" text-anchor="middle" class="text">开放性、修饰和接触提供候选机制；扰动实验检验功能与因果</text>
+  <text x="700" y="923" text-anchor="middle" class="small">每一步依据前一步结果决定，不机械执行所有 assay</text>
+  <path d="M700 754 L700 814" class="line"/>
+</svg>

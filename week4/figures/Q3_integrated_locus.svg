@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="790" viewBox="0 0 1500 790" role="img" aria-labelledby="title desc">
+  <title id="title">Q3 integrated multi-omics evidence chain for a candidate Gene Y enhancer</title>
+  <desc id="desc">A six-step evidence chain from accessibility through functional perturbation. The first five omics results are explicitly marked as not provided by the homework.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#f6f4ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#24324a" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#52627a"/>
+    </marker>
+    <style>
+      text{font-family:"PingFang SC",Arial,sans-serif}
+      .title{font-size:31px;font-weight:700;fill:#152238}
+      .subtitle{font-size:17px;font-weight:500;fill:#52627a}
+      .step{font-size:18px;font-weight:700;fill:#ffffff}
+      .label{font-size:20px;font-weight:700;fill:#152238}
+      .assay{font-size:16px;font-weight:600;fill:#38506b}
+      .note{font-size:15px;font-weight:500;fill:#52627a}
+      .panelTitle{font-size:19px;font-weight:700;fill:#152238}
+      .panelText{font-size:16px;font-weight:500;fill:#35465f}
+      .small{font-size:14px;font-weight:600;fill:#7b4750}
+    </style>
+  </defs>
+  <rect width="1500" height="790" rx="26" fill="url(#bg)"/>
+  <text x="750" y="55" text-anchor="middle" class="title">Gene Y 候选调控区域：多组学证据链与因果检验</text>
+  <text x="750" y="88" text-anchor="middle" class="subtitle">原题仅提供数据类型，未提供任何信号方向或数值；前五步必须先读取真实数据</text>
+
+  <g filter="url(#shadow)">
+    <rect x="45" y="145" width="210" height="225" rx="20" fill="#ffffff" stroke="#6aa6d8" stroke-width="2"/>
+    <rect x="45" y="145" width="210" height="48" rx="20" fill="#3f83b7"/>
+    <rect x="45" y="173" width="210" height="20" fill="#3f83b7"/>
+    <text x="150" y="177" text-anchor="middle" class="step">1  Accessibility</text>
+    <text x="150" y="230" text-anchor="middle" class="label">染色质可及性</text>
+    <text x="150" y="261" text-anchor="middle" class="assay">ATAC-seq</text>
+    <text x="150" y="303" text-anchor="middle" class="note">读取候选区域峰值</text>
+    <text x="150" y="330" text-anchor="middle" class="small">结果：题目未提供</text>
+
+    <rect x="285" y="145" width="210" height="225" rx="20" fill="#ffffff" stroke="#8d79c7" stroke-width="2"/>
+    <rect x="285" y="145" width="210" height="48" rx="20" fill="#7359ad"/>
+    <rect x="285" y="173" width="210" height="20" fill="#7359ad"/>
+    <text x="390" y="177" text-anchor="middle" class="step">2  Chromatin state</text>
+    <text x="390" y="230" text-anchor="middle" class="label">活跃染色质状态</text>
+    <text x="390" y="261" text-anchor="middle" class="assay">H3K27ac ChIP/CUT&amp;Tag</text>
+    <text x="390" y="303" text-anchor="middle" class="note">读取 H3K27ac 富集</text>
+    <text x="390" y="330" text-anchor="middle" class="small">结果：题目未提供</text>
+
+    <rect x="525" y="145" width="210" height="225" rx="20" fill="#ffffff" stroke="#4db39f" stroke-width="2"/>
+    <rect x="525" y="145" width="210" height="48" rx="20" fill="#278c79"/>
+    <rect x="525" y="173" width="210" height="20" fill="#278c79"/>
+    <text x="630" y="177" text-anchor="middle" class="step">3  Methylation</text>
+    <text x="630" y="230" text-anchor="middle" class="label">DNA 甲基化</text>
+    <text x="630" y="261" text-anchor="middle" class="assay">CpG methylation</text>
+    <text x="630" y="303" text-anchor="middle" class="note">读取 CpG 甲基化比例</text>
+    <text x="630" y="330" text-anchor="middle" class="small">结果：题目未提供</text>
+
+    <rect x="765" y="145" width="210" height="225" rx="20" fill="#ffffff" stroke="#e2a65e" stroke-width="2"/>
+    <rect x="765" y="145" width="210" height="48" rx="20" fill="#c47b2a"/>
+    <rect x="765" y="173" width="210" height="20" fill="#c47b2a"/>
+    <text x="870" y="177" text-anchor="middle" class="step">4  3D contact</text>
+    <text x="870" y="230" text-anchor="middle" class="label">三维接触</text>
+    <text x="870" y="261" text-anchor="middle" class="assay">Hi-C / Micro-C</text>
+    <text x="870" y="303" text-anchor="middle" class="note">读取启动子接触频率</text>
+    <text x="870" y="330" text-anchor="middle" class="small">结果：题目未提供</text>
+
+    <rect x="1005" y="145" width="210" height="225" rx="20" fill="#ffffff" stroke="#df7385" stroke-width="2"/>
+    <rect x="1005" y="145" width="210" height="48" rx="20" fill="#bd5367"/>
+    <rect x="1005" y="173" width="210" height="20" fill="#bd5367"/>
+    <text x="1110" y="177" text-anchor="middle" class="step">5  Expression</text>
+    <text x="1110" y="230" text-anchor="middle" class="label">Gene Y 表达</text>
+    <text x="1110" y="261" text-anchor="middle" class="assay">RNA-seq</text>
+    <text x="1110" y="303" text-anchor="middle" class="note">与匹配对照比较表达</text>
+    <text x="1110" y="330" text-anchor="middle" class="small">结果：题目未提供</text>
+
+    <rect x="1245" y="145" width="210" height="225" rx="20" fill="#ffffff" stroke="#647a96" stroke-width="2"/>
+    <rect x="1245" y="145" width="210" height="48" rx="20" fill="#405670"/>
+    <rect x="1245" y="173" width="210" height="20" fill="#405670"/>
+    <text x="1350" y="177" text-anchor="middle" class="step">6  Perturbation</text>
+    <text x="1350" y="230" text-anchor="middle" class="label">原位功能检验</text>
+    <text x="1350" y="261" text-anchor="middle" class="assay">CRISPRi</text>
+    <text x="1350" y="303" text-anchor="middle" class="note">抑制候选区域后</text>
+    <text x="1350" y="329" text-anchor="middle" class="note">检测 Gene Y 与邻近基因</text>
+  </g>
+
+  <g stroke="#52627a" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M258 258 H278"/>
+    <path d="M498 258 H518"/>
+    <path d="M738 258 H758"/>
+    <path d="M978 258 H998"/>
+    <path d="M1218 258 H1238"/>
+  </g>
+
+  <rect x="65" y="430" width="650" height="270" rx="22" fill="#eef6ff" stroke="#75a9d3" stroke-width="2"/>
+  <text x="95" y="472" class="panelTitle">证据整合：只能在真实数据支持后建立候选模型</text>
+  <text x="95" y="512" class="panelText">• 多层信号一致 → 提高“候选增强子”的可信度</text>
+  <text x="95" y="548" class="panelText">• ATAC/H3K27ac/低甲基化 → 活跃状态相关证据</text>
+  <text x="95" y="584" class="panelText">• 三维接触 + Gene Y 表达 → 靶向关系的相关证据</text>
+  <text x="95" y="620" class="panelText">• 以上均不能单独或合并证明因果</text>
+  <text x="95" y="665" class="small">当前结论：缺少实际信号，不能判定该区域是否为 Gene Y 增强子</text>
+
+  <rect x="755" y="430" width="680" height="270" rx="22" fill="#fff7ef" stroke="#d39a54" stroke-width="2"/>
+  <text x="785" y="472" class="panelTitle">可证伪设计：同时检验主模型与替代解释</text>
+  <text x="785" y="512" class="panelText">CRISPRi：多条独立 sgRNA + non-targeting 对照</text>
+  <text x="785" y="548" class="panelText">读取：Gene Y、候选区域附近其他基因、细胞状态/活力</text>
+  <text x="785" y="584" class="panelText">支持主模型：Gene Y 可重复下降，邻近基因无相同变化</text>
+  <text x="785" y="620" class="panelText">支持替代模型：其他基因改变而 Gene Y 不变</text>
+  <text x="785" y="656" class="panelText">组成混杂：在相同纯化细胞类型或单细胞层面复核</text>
+
+  <text x="750" y="756" text-anchor="middle" class="subtitle">逻辑箭头表示证据整合顺序，不表示前一步已经发生或自动导致下一步</text>
+</svg>
