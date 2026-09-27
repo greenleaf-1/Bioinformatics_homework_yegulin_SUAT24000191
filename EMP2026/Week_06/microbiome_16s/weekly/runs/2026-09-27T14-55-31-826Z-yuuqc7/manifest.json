@@ -1,0 +1,30 @@
+{
+  "course_code": "EMP2026",
+  "emp_version": "9.0.4",
+  "layout": "week_first",
+  "week_dir": "Week_06",
+  "track_id": "microbiome_16s",
+  "track_key": "microbiome_16s",
+  "track_title": "16S 微生物组",
+  "assignment_type": "weekly",
+  "assignment_id": "week_06",
+  "assignment_title": "第6周",
+  "week": 6,
+  "type": "weekly",
+  "case_id": "course_microbiome_16s",
+  "task_ids": [],
+  "student_id": "24000191",
+  "display_name": "叶顾霖",
+  "github_login": "greenleaf-1",
+  "github_repo": "greenleaf-1/Bioinformatics_homework_yegulin_SUAT24000191",
+  "github_branch": "main",
+  "git_path": "EMP2026/Week_06/microbiome_16s/weekly/runs/2026-09-27T14-55-31-826Z-yuuqc7",
+  "session_id": "JJOOtTNvizA2mhGb5bKCxeLG",
+  "experiment": "16S_week6",
+  "run_id": "2026-09-27T14-55-31-826Z-yuuqc7",
+  "synced_at": "2026-09-27T14:55:31Z",
+  "include_rds": false,
+  "session_manifest": {
+    "session_id": "JJOOtTNvizA2mhGb5bKCxeLG"
+  }
+}
