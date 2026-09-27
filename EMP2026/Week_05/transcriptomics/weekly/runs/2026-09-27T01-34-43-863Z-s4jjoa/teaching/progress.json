@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "user_id": "Jc1dJ3YjaiUMWPcenSjwydhY",
+  "progress": {
+    "passed_quizzes": {
+      "course_transcriptomics::s1_import": "2026-09-22T09:55:48.841+0800",
+      "course_transcriptomics::s2_prepare": "2026-09-23T09:44:02.263+0800"
+    },
+    "user_id": "Jc1dJ3YjaiUMWPcenSjwydhY",
+    "updated_at": "2026-09-23T09:54:22.085+0800",
+    "completed_tasks": {
+      "course_transcriptomics::s1_import": "2026-09-23T09:54:22.085+0800"
+    }
+  },
+  "reflections": [
+    {
+      "user_id": "Jc1dJ3YjaiUMWPcenSjwydhY",
+      "case_id": "course_transcriptomics",
+      "task_id": "s1_import",
+      "reflection": "ID类型是SYMBOL，不需要转换，colData也完全匹配",
+      "ai_declaration": "",
+      "updated_at": "2026-09-23T09:54:22.085+0800"
+    }
+  ]
+}
