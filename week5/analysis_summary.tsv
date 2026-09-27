@@ -1,0 +1,8 @@
+metric	value
+retained_genes	989
+tested_with_padj	989
+significant_total	60
+significant_up	36
+significant_down	24
+pca_pc1_percent	24.1
+pca_pc2_percent	9.3

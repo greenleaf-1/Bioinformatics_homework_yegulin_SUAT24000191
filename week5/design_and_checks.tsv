@@ -1,0 +1,12 @@
+check_id	status	observed	expected	evidence_or_action
+count_matrix_dimensions	PASS	1000 x 12	1000 genes x 12 samples	Read from the approved count-matrix CSV copied to data_raw/.
+metadata_rows	PASS	12	12 samples	Read from the approved sample-metadata CSV copied to data_raw/.
+unique_gene_ids	PASS	1000	1000	Gene identifiers must be unique.
+unique_sample_ids	PASS	12	12	Sample identifiers must be unique.
+sample_correspondence	PASS	CA1,CA2,TA1,TA2,CB1,CB2,TB1,TB2,CC1,CC2,TC1,TC2	CA1,CA2,TA1,TA2,CB1,CB2,TB1,TB2,CC1,CC2,TC1,TC2	Column order in the count matrix must exactly match metadata row order.
+raw_nonnegative_integer_counts	PASS	range=0..4770	finite non-negative integers	DESeq2 requires untransformed integer counts.
+condition_reference	PASS	control,treated	control,treated	control is explicitly set as the reference level.
+condition_batch_complete	PASS	0	0 missing values	Both design variables are required for every sample.
+design_full_rank	PASS	rank=4; columns=4	rank equals number of columns	A full-rank design is required for coefficient estimation.
+prefilter	PASS	989 of 1000 genes retained	count >= 10 in at least 3 samples	Filtering rule specified in the homework instructions.
+treated_vs_control_coefficient	PASS	Intercept,batch_B_vs_A,batch_C_vs_A,condition_treated_vs_control	condition_treated_vs_control	Coefficient inspected with resultsNames(dds) before extraction and shrinkage.
