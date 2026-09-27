@@ -1,0 +1,17 @@
+{
+  "event": "sync",
+  "synced_at": "2026-09-27T15:09:58Z",
+  "student_id": "24000191",
+  "display_name": "叶顾霖",
+  "emp_version": "9.0.4",
+  "github_login": "greenleaf-1",
+  "github_repo": "greenleaf-1/Bioinformatics_homework_yegulin_SUAT24000191",
+  "github_branch": "main",
+  "week_dir": "Week_06",
+  "track": "microbiome_16s",
+  "assignment_type": "weekly",
+  "assignment_id": "week_06",
+  "assignment_title": "第6周",
+  "git_path": "EMP2026/Week_06/microbiome_16s/weekly/runs/2026-09-27T15-09-55-668Z-wl6l4s",
+  "run_id": "2026-09-27T15-09-55-668Z-wl6l4s"
+}
